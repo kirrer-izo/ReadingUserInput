@@ -29,6 +29,13 @@ public class PaintJob {
         return (int) Math.ceil(bucketsRequired);
     }
 
+    public static int getBucketCount (double area, double areaPerBucket) {
+        if (area <= 0 || areaPerBucket <= 0) {
+            return -1;
+        }
+        double bucketsRequired = area / areaPerBucket;
+        return (int) Math.ceil(bucketsRequired);
 
+    }
 
 }
